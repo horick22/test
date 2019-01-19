@@ -1,0 +1,73 @@
+git local repo command
+
+# initialize a git repo and manage the project *in* the folder
+git init
+
+# check the status of the repo
+git status
+
+# Add all the files in the tracking 
+git add .
+git add <filename>
+
+# Commit changes
+git commit -m "message"
+
+# show the branch "master"
+git branch
+
+# see the commits log
+git log
+
+# go back previous commit
+# usually use to check and see previous versions
+git checkout <commit_id>
+
+#go back to last commit
+git master
+
+#to revert to a old commit and delete any newer commit
+#becareful as this will delete all new changes after this commit_id
+git reset --hard <commit_id>
+
+#to revert all unstage changes and go back to the origin commit state
+#very helpful command
+git checkout -- .
+
+# to create a new branch e.g for developing new feature
+git checkout -b new-feature
+
+#switch other branch
+git checkout <branch-name>
+git master
+
+
+#merge 2 branches.  Must be at the master branch
+git merge new-feature
+
+#delete a branch you dont need anymore
+git branch -D new-feature
+
+
+git remote repo commands
+# add an existing project to github
+git remote add origin https://github.com/...git
+
+git remote
+git remote -v
+
+# push our branch to the repo
+git push -u origin master
+
+git remote
+git branch -r
+
+# push the changes to remote repo
+git push
+
+# pull new remote changes to local
+git pull
+
+
+
+
